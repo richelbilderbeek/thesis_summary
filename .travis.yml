@@ -13,10 +13,11 @@ r_github_packages:
   - ropensci/spelling
 
 script:
-  - make
+  - echo "Nothing"
+  #- make
 
 after_script:
-  - Rscript -e 'spelling::spell_check_files("introduction.tex", ignore = readLines("inst/WORDLIST"))'
+  #- Rscript -e 'spelling::spell_check_files("introduction.tex", ignore = readLines("inst/WORDLIST"))'
   # Same, but gives an error if spellcheck fails
-  - spelling_errors=$(Rscript -e 'spelling::spell_check_files("introduction.tex", ignore = readLines("inst/WORDLIST"))') ; [ "$spelling_errors" == "No spelling errors found." ]
+  #- spelling_errors=$(Rscript -e 'spelling::spell_check_files("introduction.tex", ignore = readLines("inst/WORDLIST"))') ; [ "$spelling_errors" == "No spelling errors found." ]
 
