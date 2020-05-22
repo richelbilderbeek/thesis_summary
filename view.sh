@@ -6,4 +6,4 @@
 #
 #   ./view.sh
 #
-qpdfview summary.pdf
+evince summary.pdf
