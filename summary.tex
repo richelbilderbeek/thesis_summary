@@ -1,36 +1,147 @@
 \chapter*{Summary}
 \addcontentsline{toc}{chapter}{Summary}
 
-[This is just a Google Translate, will translate it if Dutch version is OK]
+\noindent 
+\dropcap{T}{his} summary is written especially for
+non-biologists, so they can understand what is
+discussed in this thesis.
 
-Speciation is a biological process that creates new species. Right away
-Phylogenetic tree allows you to see the evolutionary history and kinship of species
-view. These trees cannot be measured directly. Be instead
-they calculated. Behind this calculation is a mathematical model with many assumptions,
-including the assumption how speciation works.
-In that test piece I look at the effect of assuming how speciation works.
-We think that the most commonly used speciation models are simple enough,
-but not too simple. I measure to what extent that is correct.
-In Chapter 2 I showed Babette: an R package that allows you to use BEAST2, a Bayesi
-can call on phylogenetic information program. babette is a flexible and
-become a robust program.
-In chapter 3 I showed pirouette: an R package that you can use to measure how
-is the influence of a correct or incorrect speciation model. Me and my co-author
-show that this instrument works properly, provided you do enough repetitions
-chance effects play a small role.
-In chapters 4 and 5 I showed the influence of using a standard
-speciation model if the real speciation process is somewhat more complex. In
-Chapter 4 the real phylogenetic trees are simulated with a speciation
-process in which two types can arise simultaneously. Me and my co-author
-to show that ...
-In Chapter 5, the real phylogenetic trees are simulated with a species
-process in which speciation does take time. I show that ... and that it's the effect
-from [sampling] ... is.
-This dissertation teaches us that ...
-The great thing about my research is that other scientists find it easy themselves
-also something that can go along: both babette and pirouette are flexible and professional R
-packages. babette has made it possible to conduct more extensive research
-phylogenetic models, because now an experiment can be done from a script
-instead of manually setting each experiment. With pirouette can
-scientists finally measure in a standard way to what extent a more complex one
-species formation model is worth using.
+\paragraph{Speciation}
+
+There are plenty of (animal, plant, etc.) species on the world.
+In Earth's early days, this was not yet the the case:
+it was then when the first species arose.
+In the many years that followed, many species have came to be.
+The process that causes this, we call speciation.
+
+\paragraph{Speciation in bacteria}
+
+There are multiple ways that speciation can occur.
+For bacteria, we state that two bacteria are of different species,
+if their DNA differs enough. Bacteria multiply when the 
+environment is suitable and with each cel division, the DNA
+of the new bacteria changes slightly. 
+When one starts with two identical bacteria, after a while one
+ends up with two different bacterial species.
+
+\paragraph{Speciation in animals}
+
+For animals it is harder to state when two animals are of two 
+different species. A commonly used defition is that two groups
+of animals are of different species, when the offspring 
+of individuals of the different groups is either absent 
+or results in infertile grandchildren.
+
+There are multiple mechanisms that cause speciation in animals.
+One simple mechanisms is the split of group in two groups
+by a change in the environment, as can be done by a river
+or a mountain.
+
+\paragraph{Phylogenies}
+
+When we look at multiple species over a longer period of 
+time (that is, millions of years!), likely there will be speciation
+events. Some species will give rise to more new species than others.
+We can display this process using a phylogenetic tree, as shown
+in figure \ref{fig:phylogeny}.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.5\textwidth]{phylogeny.png}
+  \caption{
+    A phylogengy that displays that human's and gorrila's
+    are more related to one another, compared to
+    humans and dolphins.
+    This phylogeny is not to scale.
+  }
+  \label{fig:phylogeny}
+\end{figure}
+
+\paragraph{DNA}
+
+One needs some form of information to create a phylogeny,
+such as, for example, the DNA sequence of the species
+within the phylogeny.
+All living beings have DNA, thanks to which is possible 
+to put all species in one big phylogeny.
+Each time DNA is tranferred to a next generation, it
+changes a little bit.
+Due to this property, it is possible to base a phylogeny
+on DNA sequences.
+To put it simply: species that have a more similar DNA sequence, are
+closer related.
+
+\paragraph{Phylogentic model}
+
+There are multiple ways to construct a phylogeny
+from DNA sequences, because one can have different 
+assumptions regarding how speciation occurs.
+For example, one can assume that speciation events
+occur just as often all the time (on average) in all species.
+Or one may assume that DNA of all species has the same mutation rate.
+The collection of assumptions, we call a model. In this case,
+we call it a phylogenetic model.
+
+\paragraph{Constructing phylogenies}
+
+There are computer programs that construct a phylogeny from a
+phylogenetic model and DNA sequences.
+One of the most popular of such programs is called BEAST2.
+Because I would simulate many thousands of phylogenies,
+I needed to be able to do so from scripts only (that is,
+without any mouse clicks). For that reasons, I programmed
+\verb;babette;, an R package with which one can call BEAST2.
+In chapter 2, one can read more about \verb;babette;.
+
+\paragraph{Phylogenetic models}
+
+Because one can pick many different assumption regarding speciation,
+the question which one is best arises quickly.
+And there are also multiple methods to compare 
+phylogenetic models (that is, to find out which one is 'best').
+A drawback of most methods is that the phylogenetic model
+needs to be understood well mathematically.
+This measns, that before one can measure how 'good' a new
+phylogenetic model is, it needs to be solved mathematically first.
+
+\paragraph{Determine how good phylogenetic models are}
+
+With a group of three, we devise a way to determine if
+it is important to solve a new phylogenetic model analytically.
+With our new method, one only needs to simulate a lot
+of phylogenies using the novel method.
+Usually, this is way easier than solving a model mathematically.
+This method was put in an R package called \verb;pirouette;. 
+In chapter 3 one can read more about \verb;pirouette;.
+
+\paragraph{Testing a new speciation model}
+
+After we invented a method to determine how important it is
+to solve a phylogenetic model mathematically, we applied
+the method on a new phylogenetic model that has not yet been
+solved mathematically.
+
+This new model is named the MBD ('Multiple-Birth Death') model.
+In this model, on assumes that speciation occurs in all species
+equally often on average, except that sometimes 
+a 'speciation wave' occurs, in which multiple species speciate
+at the same time. In chapter 4 one can read how we did this exactly.
+
+We found that the novel and more complex model was not much
+better compared to simpler and mathematically solved model.
+If one need good phylogenies, there is little evidence 
+for preferring the MBD model.
+
+\paragraph{Conclusion}
+
+This thesis shows that we can find out wether or not we should investigate
+a novel phylogenetic model in-dept, so that scientists can better
+spend their time.
+
+The nice thing about my research is that other scientists also profit
+from it: with \verb;babette; anyone can easily constrict phylogenies
+from DNA sequences. At the moment of writing, there have been 
+3 scientific publications that use \verb;babette;.
+Also \verb;pirouette; has become a strong R package geworden, but 
+without any citations ye.
+
