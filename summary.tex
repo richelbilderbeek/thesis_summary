@@ -9,25 +9,26 @@ discussed in this thesis.
 \paragraph{Speciation}
 
 There are plenty of (animal, plant, etc.) species on the world.
-In Earth's early days, this was not yet the the case:
-it was then when the first species arose.
-In the many years that followed, many species have came to be.
-The process that causes this, we call speciation.
+In Earth's early days this was not yet the the case:
+it took hundreds of millions of years for the first species to arise.
+In the many years that followed, billions of species have formed.
+The process that creates new species, we call speciation.
 
 \paragraph{Speciation in bacteria}
 
 There are multiple ways that speciation can occur.
 For bacteria, we state that two bacteria are of different species,
 if their DNA differs enough. Bacteria multiply when the 
-environment is suitable and with each cel division, the DNA
+environment is suitable and with each cell division, the DNA
 of the new bacteria changes slightly. 
-When one starts with two identical bacteria, after a while one
+Thus, when one starts with two identical bacteria, 
+after some time, one
 ends up with two different bacterial species.
 
 \paragraph{Speciation in animals}
 
 For animals it is harder to state when two animals are of two 
-different species. A commonly used defition is that two groups
+different species. A commonly used definition is that two groups
 of animals are of different species, when the offspring 
 of individuals of the different groups is either absent 
 or results in infertile grandchildren.
@@ -49,7 +50,7 @@ in figure \ref{fig:phylogeny}.
   \centering
   \includegraphics[width=0.5\textwidth]{phylogeny.png}
   \caption{
-    A phylogengy that displays that human's and gorrila's
+    A phylogeny that displays that human's and gorilla's
     are more related to one another, compared to
     humans and dolphins.
     This phylogeny is not to scale.
@@ -59,26 +60,26 @@ in figure \ref{fig:phylogeny}.
 
 \paragraph{DNA}
 
-One needs some form of information to create a phylogeny,
+One needs some form of information to base a phylogeny on,
 such as, for example, the DNA sequence of the species
 within the phylogeny.
-All living beings have DNA, thanks to which is possible 
+All living beings have DNA, thanks to which it is possible 
 to put all species in one big phylogeny.
-Each time DNA is tranferred to a next generation, it
+Each time DNA is transferred to a next generation, it
 changes a little bit.
 Due to this property, it is possible to base a phylogeny
 on DNA sequences.
-To put it simply: species that have a more similar DNA sequence, are
+Simply put: species that have a more similar DNA sequence, are
 closer related.
 
-\paragraph{Phylogentic model}
+\paragraph{Phylogenetic model}
 
 There are multiple ways to construct a phylogeny
 from DNA sequences, because one can have different 
 assumptions regarding how speciation occurs.
 For example, one can assume that speciation events
 occur just as often all the time (on average) in all species.
-Or one may assume that DNA of all species has the same mutation rate.
+Or one may assume that DNA of all species have the same mutation rate.
 The collection of assumptions, we call a model. In this case,
 we call it a phylogenetic model.
 
@@ -101,12 +102,12 @@ And there are also multiple methods to compare
 phylogenetic models (that is, to find out which one is 'best').
 A drawback of most methods is that the phylogenetic model
 needs to be understood well mathematically.
-This measns, that before one can measure how 'good' a new
+This means, that before one can measure how 'good' a new
 phylogenetic model is, it needs to be solved mathematically first.
 
 \paragraph{Determine how good phylogenetic models are}
 
-With a group of three, we devise a way to determine if
+Giovanni, Rampal and I invented a way to determine if
 it is important to solve a new phylogenetic model analytically.
 With our new method, one only needs to simulate a lot
 of phylogenies using the novel method.
@@ -121,20 +122,19 @@ to solve a phylogenetic model mathematically, we applied
 the method on a new phylogenetic model that has not yet been
 solved mathematically.
 
-This new model is named the MBD ('Multiple-Birth Death') model.
-In this model, on assumes that speciation occurs in all species
+This new model is named the MBD ('Multiple-Birth Death') model
+and was invented by Giovanni.
+In this model, one assumes that speciation occurs in all species
 equally often on average, except that sometimes 
 a 'speciation wave' occurs, in which multiple species speciate
 at the same time. In chapter 4 one can read how we did this exactly.
 
-We found that the novel and more complex model was not much
-better compared to simpler and mathematically solved model.
-If one need good phylogenies, there is little evidence 
-for preferring the MBD model.
+We found out, that would nature follow the MBD model, we
+can make phylogenies using simpler models that are just as good.
 
 \paragraph{Conclusion}
 
-This thesis shows that we can find out wether or not we should investigate
+This thesis shows that we can find out whether or not we should investigate
 a novel phylogenetic model in-dept, so that scientists can better
 spend their time.
 
@@ -142,6 +142,6 @@ The nice thing about my research is that other scientists also profit
 from it: with \verb;babette; anyone can easily constrict phylogenies
 from DNA sequences. At the moment of writing, there have been 
 3 scientific publications that use \verb;babette;.
-Also \verb;pirouette; has become a strong R package geworden, but 
-without any citations ye.
+Also \verb;pirouette; has become a strong R package, but 
+without any citations yet.
 
