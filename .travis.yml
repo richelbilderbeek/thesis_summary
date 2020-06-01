@@ -14,7 +14,7 @@ r_github_packages:
 
 script:
   - echo "Nothing"
-  #- make
+  - make
 
 after_script:
   #- Rscript -e 'spelling::spell_check_files("introduction.tex", ignore = readLines("inst/WORDLIST"))'
