@@ -13,6 +13,7 @@ r_github_packages:
   - ropensci/spelling
 
 after_script:
+  - sudo apt install texlive-latex-recommended texlive-latex-extra texlive-fonts-extra texlive-fonts-recommended texlive-extra-utils texlive-humanities texlive-full texlive-games texlive-pictures texlive-science texlive-xetex ktikz
   - make
   #- Rscript -e 'spelling::spell_check_files("introduction.tex", ignore = readLines("inst/WORDLIST"))'
   # Same, but gives an error if spellcheck fails
